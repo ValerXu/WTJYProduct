@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haibin:calendarview:3.2.9@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/calendarview-3.2.9.aar/90a98bd2d1757551dc06c0d19149b1ee/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/calendarview-3.2.9.aar/90a98bd2d1757551dc06c0d19149b1ee/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haibin/calendarview/3.2.9/714314990451ecb600a08831ec068d3c25b61b4f/calendarview-3.2.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

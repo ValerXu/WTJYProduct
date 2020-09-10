@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    订单支付 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/modeldetails_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+</LinearLayout>

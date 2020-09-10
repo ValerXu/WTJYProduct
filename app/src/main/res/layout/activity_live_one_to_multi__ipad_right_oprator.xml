@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/dp_20">
+
+        <ImageView
+            android:id="@+id/iv_operator_audio"
+            style="@style/activity_one_to_multi_ipad_right_icon_style"
+            android:layout_above="@+id/iv_operator_video"
+            android:src="@drawable/audio_select"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_operator_video"
+            style="@style/activity_one_to_multi_ipad_right_icon_style"
+            android:layout_above="@+id/iv_orperator_rtc_down"
+            android:paddingTop="@dimen/dp_2"
+            android:src="@drawable/video_select" />
+
+        <FrameLayout
+            android:id="@+id/fl_orperator_rtc_cancel"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+            <com.talkfun.widget.RippleView
+                android:id="@+id/ripple_view_cancle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:rColor="#3B97FF" />
+            <com.talkfun.widget.HoloView
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_gravity="center"
+                app:ringWidthPercent="0"
+                app:text="@string/activity_live_one_to_multi_left_cancel"
+                app:textBgColorEnd="#20D1FF"
+                app:textBgColorStart="#3B97FF"
+                app:textColor="@color/white"
+                app:textSize="@dimen/sp_7" />
+        </FrameLayout>
+
+        <com.talkfun.widget.HoloView
+            android:id="@+id/iv_orperator_rtc_apply"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            app:ringColor="#4D208FFF"
+            app:ringWidthPercent="0.2"
+            app:text="上\n讲台"
+            app:textBgColorEnd="#20D1FF"
+            app:textBgColorStart="#3B97FF"
+            app:textColor="@color/white"
+            app:textSize="@dimen/sp_7" />
+
+        <com.talkfun.widget.HoloView
+            android:id="@+id/iv_orperator_rtc_down"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            app:ringColor="#4DFF7E3B"
+            app:ringWidthPercent="0.2"
+            app:text="下\n讲台"
+            app:textBgColor="#FF7E3B"
+            app:textColor="@color/white"
+            app:textSize="@dimen/sp_7" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/parent_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_button_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignBottom="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/tv_useful_expression"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@drawable/dialog_item_useful_expression_bg"
+                    android:text="常用语" />
+
+                <ImageView
+                    android:id="@+id/iv_pop_input"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@mipmap/dialog_otm_input_msg_text"
+                    android:visibility="gone" />
+
+                <com.android.jwjy.wtjyproduct.view.ClearEditText
+                    android:id="@+id/edtInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_weight="1"
+                    android:background="@drawable/dialog_msg_clear_text_view"
+                    android:gravity="center_vertical"
+                    android:hint="@string/pop_live_otm_chat_input_hint"
+                    android:imeOptions="actionSend|flagNoExtractUi"
+                    android:paddingRight="@dimen/dp_3"
+                    android:textColor="@color/black"
+                    android:textColorHint="#525E72"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_emoticons"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@drawable/dialog_otm_input_msg_icon" />
+
+                <Button
+                    android:id="@+id/send_message_btn"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_7"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:background="@drawable/send_btn_bg"
+                    android:enabled="false"
+                    android:text="@string/btn_send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <com.android.jwjy.wtjyproduct.view.ExpressionLayout
+                android:id="@+id/layout_expression"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_90"
+                android:layout_below="@id/edtInput"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_useful_expression"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_90"
+                android:layout_below="@id/edtInput"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

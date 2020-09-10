@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    题库 做题设置 -->
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/questionbank_answerpaper_shortanswersign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize17"
+        android:text=""
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="#666666"
+        android:lineSpacingExtra="@dimen/dp_5"/>
+    <TextView
+        android:id="@+id/questionbank_answerpaper_shortanswer"
+        android:layout_toRightOf="@id/questionbank_answerpaper_shortanswersign"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="@dimen/textsize17"
+        android:text=""
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="#666666"
+        android:lineSpacingExtra="@dimen/dp_5"/>
+    <EditText
+        android:id="@+id/questionbank_answerpaper_shortansweredittext"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_below="@id/questionbank_answerpaper_shortanswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入您的答案"
+        android:windowSoftInputMode="stateVisible|adjustResize"
+        android:textSize="@dimen/textsize15"
+        android:textColor="#999999"
+        android:padding="@dimen/dp13"
+        android:lineSpacingExtra="@dimen/dp_5"
+        android:background="@drawable/bg_edittext"/>
+    <!--    android:layout_marginTop="@dimen/dp_70"
+android:layout_height="@dimen/dp_37"-->
+    <TextView
+        android:id="@+id/questionbank_answerpaper_shortanswer_analysisbutton"
+        android:layout_width="@dimen/dp_193"
+        android:layout_height="@dimen/dp0"
+        android:textColor="#999999"
+        android:text="查看解析"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/dp13"
+        android:layout_marginLeft="@dimen/dp13"
+        android:textSize="@dimen/textsize20"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp0"
+        android:layout_below="@id/questionbank_answerpaper_shortansweredittext"
+        android:background="@drawable/textview_style_rect_gray"
+        />
+    <LinearLayout
+        android:id="@+id/questionbank_answerpaper_shortanswer_analysis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_below="@id/questionbank_answerpaper_shortanswer_analysisbutton"
+        android:layout_marginBottom="@dimen/dp13"/>
+</RelativeLayout>

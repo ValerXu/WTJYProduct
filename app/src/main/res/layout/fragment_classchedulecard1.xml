@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.haibin.calendarview.CalendarLayout
+    android:id="@+id/calendarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff"
+    app:calendar_show_mode="only_week_view"
+    app:default_status="expand"
+    app:calendar_content_view_id="@+id/recyclerView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.haibin.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:calendar_padding="10dp"
+        app:month_view="com.android.jwjy.jkjyproduct.ModelSimpleMonthView"
+        app:calendar_height="46dp"
+        app:current_month_lunar_text_color="#CFCFCF"
+        app:current_month_text_color="#999999"
+        app:min_year="2004"
+        app:other_month_text_color="#e1e1e1"
+        app:scheme_text="假"
+        app:scheme_text_color="#333"
+        app:scheme_theme_color="#333"
+        app:selected_text_color="#fff"
+        app:selected_theme_color="@color/blue649cf0"
+        app:week_background="#fff"
+        app:week_text_color="#999999"
+        app:week_text_size="@dimen/textsize10"
+        app:week_view="com.android.jwjy.jkjyproduct.ModelSimpleWeekView"
+        app:year_view_day_text_color="#333333"
+        app:year_view_day_text_size="@dimen/textsize15"
+        app:year_view_month_text_color="#ff0000"
+        app:year_view_month_text_size="@dimen/textsize15"
+        app:year_view_scheme_color="#f17706"
+        app:week_start_with="mon"/>
+
+    <com.android.jwjy.wtjyproduct.ModelGroupRecyclerView
+        android:id="@+id/recyclerView"
+        app:group_background="#ffffff"
+        app:group_center="false"
+        app:group_height="42dp"
+        app:group_has_header="false"
+        app:group_padding_left="@dimen/dp13"
+        app:group_padding_right="@dimen/dp13"
+        app:group_text_size="@dimen/textsize12"
+        app:group_text_color="#999999"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff" />
+<!--    <com.haibin.calendarview.CalendarView-->
+<!--        android:id="@+id/calendarView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#fff"-->
+<!--        app:current_month_text_color="#333333"-->
+<!--        app:current_month_lunar_text_color="#CFCFCF"-->
+<!--        app:min_year="2004"-->
+<!--        app:max_year="2030"-->
+<!--        app:other_month_text_color="#e1e1e1"-->
+<!--        app:other_month_lunar_text_color="#e1e1e1"-->
+<!--        app:scheme_text="假"-->
+<!--        app:scheme_text_color="#333"-->
+<!--        app:scheme_theme_color="#128c4b"-->
+<!--        app:selected_lunar_text_color="#CFCFCF"-->
+<!--        app:month_view="com.android.jwjy.jkjyproduct.ModelColorfulMonthView"-->
+<!--        app:week_view="com.android.jwjy.jkjyproduct.ModelColorfulWeekView"-->
+<!--        app:selected_text_color="#333"-->
+<!--        app:selected_theme_color="#108cd4"-->
+<!--        app:week_background="#fff"-->
+<!--        app:week_text_color="#111"-->
+<!--        app:week_start_with="mon"-->
+<!--        app:year_view_day_text_color="#333333"-->
+<!--        app:year_view_day_text_size="9sp"-->
+<!--        app:year_view_month_text_color="#ff0000"-->
+<!--        app:year_view_month_text_size="20sp"-->
+<!--        app:month_view_show_mode="mode_only_current"-->
+<!--        app:year_view_scheme_color="#f17706"/>-->
+
+<!--    <android.support.v7.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"/>-->
+
+</com.haibin.calendarview.CalendarLayout>

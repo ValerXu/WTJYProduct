@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_ad_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:clickable="true"
+    android:visibility="gone">
+
+    <FrameLayout
+        android:id="@+id/fl_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.talkfun.widget.round.RoundImageView
+            android:id="@+id/iv_ad_go_back"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:padding="@dimen/dp_3"
+            android:scaleType="centerInside"
+            android:src="@mipmap/activity_playback_ad_go_back"
+            app:rv_backgroundColor="@color/activity_playback_ad_icon_bg"
+            app:rv_isRadiusHalfHeight="true" />
+
+        <com.talkfun.widget.round.RoundLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_14"
+            android:paddingBottom="@dimen/dp_5"
+            app:rv_backgroundColor="@color/activity_playback_ad_icon_bg"
+            app:rv_isRadiusHalfHeight="true">
+
+            <TextView
+                android:id="@+id/tv_count_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFD21E"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/tv_skip_ad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15" />
+        </com.talkfun.widget.round.RoundLinearLayout>
+    </RelativeLayout>
+
+    <com.talkfun.widget.round.RoundImageView
+        android:id="@+id/iv_ad_full_screen"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_35"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:scaleType="centerInside"
+        android:src="@drawable/activity_playback_ad_full_screen"
+        app:rv_backgroundColor="@color/activity_playback_ad_icon_bg"
+        app:rv_isRadiusHalfHeight="true" />
+</FrameLayout>

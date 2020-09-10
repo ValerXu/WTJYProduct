@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_small_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.android.jwjy.wtjyproduct.view.LoadingImageView
+        android:id="@+id/platform_iv"
+        style="@style/activity_rtc_container"
+        android:src="@mipmap/activity_rtc_up_platform" />
+
+    <!--    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/down_platform_fab"
+            style="@style/activity_rtc_container"
+            android:scaleType="center"
+            android:src="@mipmap/activity_rtc_down_platform"
+            fab:backgroundTint="@color/activity_small_icon_bg"
+            fab:borderWidth="0dp"
+            fab:elevation="0dp"
+            fab:fabSize="mini"
+            fab:pressedTranslationZ="0dp" />-->
+    <ImageView
+        android:id="@+id/down_platform_iv"
+        style="@style/activity_rtc_container"
+        android:src="@mipmap/activity_rtc_down_platform" />
+    <!--    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/chat_fab"
+            style="@style/activity_rtc_container"
+            android:src="@mipmap/activity_rtc_chat"
+            fab:backgroundTint="@color/activity_small_icon_bg"
+            fab:borderWidth="0dp"
+            fab:elevation="0dp"
+            fab:fabSize="mini"
+            fab:pressedTranslationZ="0dp" />-->
+    <ImageView
+        android:id="@+id/chat_iv"
+        style="@style/activity_rtc_container"
+        android:src="@mipmap/activity_rtc_chat" />
+
+    <!--    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/audio_switch_fab"
+            style="@style/activity_rtc_container"
+            android:src="@drawable/activity_small_audio"
+            fab:backgroundTint="@color/activity_small_icon_bg"
+            fab:borderWidth="0dp"
+            fab:elevation="0dp"
+            fab:fabSize="mini"
+            fab:pressedTranslationZ="0dp" />-->
+
+    <ImageView
+        android:id="@+id/audio_switch_iv"
+        style="@style/activity_rtc_container"
+        android:src="@drawable/activity_small_audio" />
+
+    <!--    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/video_switch_fab"
+            style="@style/activity_rtc_container"
+            android:src="@drawable/activity_small_video"
+            fab:backgroundTint="@color/activity_small_icon_bg"
+            fab:borderWidth="0dp"
+            fab:elevation="0dp"
+            fab:fabSize="mini"
+            fab:pressedTranslationZ="0dp" />-->
+
+    <ImageView
+        android:id="@+id/video_switch_iv"
+        style="@style/activity_rtc_container"
+        android:src="@drawable/activity_small_video" />
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    章节练习 -->
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/questionbank_sub_details_chapterexercises_main"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--    题库 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/questionbank_sub_details_chapterexercises1_name_layout"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp15">
+        <TextView
+            android:layout_width="@dimen/dp4"
+            android:layout_height="@dimen/dp4"
+            android:layout_marginLeft="@dimen/dp35"
+            android:background="@color/holo_red_dark"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/questionbank_sub_details_chapterexercises1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="燃烧"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:textSize="@dimen/textsize16"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp13"
+            android:textColor="#333333"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/questionbank_sub_details_chapterexercises1_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="共计30道题"
+        android:textColor="#999999"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/textsize12"
+        android:layout_below="@id/questionbank_sub_details_chapterexercises1_name_layout"
+        android:layout_marginLeft="@dimen/dp_47"
+        android:layout_marginRight="@dimen/dp14"
+        android:layout_marginTop="@dimen/dp8"/>
+    <View
+        android:id="@+id/questionbank_sub_details_chapterexercises1_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp13"
+        android:layout_marginLeft="@dimen/dp35"
+        android:background="#e5e5e5"
+        android:layout_marginBottom="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp13"
+        android:layout_below="@id/questionbank_sub_details_chapterexercises1_count"/>
+</RelativeLayout>

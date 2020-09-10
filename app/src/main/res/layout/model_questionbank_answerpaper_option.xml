@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    题库 做题设置 -->
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <TextView-->
+<!--        android:id="@+id/questionbank_answerpaper_option_name"-->
+<!--        android:layout_width="@dimen/dp24"-->
+<!--        android:layout_height="@dimen/dp24"-->
+<!--        android:layout_marginLeft="@dimen/dp20"-->
+<!--        android:layout_marginTop="@dimen/dp30"-->
+<!--        android:text="A"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="@dimen/textsize16"-->
+<!--        android:textColor="#649cf0"-->
+<!--        android:background="@drawable/textview_style_circle_blue649cf0"/>-->
+    <TextView
+        android:id="@+id/questionbank_answerpaper_option_name"
+        android:layout_width="@dimen/dp24"
+        android:layout_height="@dimen/dp24"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp30"
+        android:text="A"
+        android:gravity="center"
+        android:textSize="@dimen/textsize16"
+        android:textColor="#80999999"
+        android:background="@drawable/textview_style_circle_gray8099"/>
+    <TextView
+        android:id="@+id/questionbank_answerpaper_option_title"
+        android:layout_toRightOf="@id/questionbank_answerpaper_option_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp13"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp_31"
+        android:text="消防电梯故障"
+        android:textSize="@dimen/textsize17"
+        android:textColor="#999999"
+        android:lineSpacingExtra="@dimen/dp_5"/>
+</RelativeLayout>

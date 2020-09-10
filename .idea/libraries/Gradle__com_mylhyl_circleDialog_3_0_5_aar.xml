@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.mylhyl:circleDialog:3.0.5@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/circleDialog-3.0.5.aar/0721384546bc0268bc3fa6a88d8b346e/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/circleDialog-3.0.5.aar/0721384546bc0268bc3fa6a88d8b346e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/circleDialog-3.0.5.aar/0721384546bc0268bc3fa6a88d8b346e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mylhyl/circleDialog/3.0.5/c5b829f358e8a6eaa54452c3581cf928309ef4e5/circleDialog-3.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/shade_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/adapter_small_item_video_bg">
+
+        <ImageView
+            android:id="@+id/shade_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/video_offline_progress_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/adapter_small_item_video_bg"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/gray"
+            android:indeterminateTintMode="src_atop" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="bottom"
+        android:background="@color/translucence"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/user_name_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxEms="6"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/audio_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/adapter_video_audio_close"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/paint_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/adapter_video_paint"
+            android:visibility="gone" />
+    </LinearLayout>
+</FrameLayout>
+

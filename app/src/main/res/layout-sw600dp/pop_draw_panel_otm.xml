@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cpiz.android.bubbleview.BubbleLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:bb_arrowDirection="Right"
+    app:bb_arrowPosDelta="20dp"
+    app:bb_arrowPosPolicy="SelfBegin"
+    app:bb_fillColor="#1D2229"
+    android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:orientation="vertical">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/draw_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_3"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="#1A919DAE" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/color_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_3"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="#1A919DAE" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/stoke_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+</com.cpiz.android.bubbleview.BubbleLinearLayout>
+
+
+

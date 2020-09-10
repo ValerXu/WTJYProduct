@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    课程问答 -->
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <TextView
+        android:id="@+id/course_downloadmanager_child_titletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp13"
+        android:layout_marginRight="@dimen/dp13"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="管理缓存"
+        android:textColor="#333333"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:textSize="@dimen/textsize16"/>
+    <View
+        android:id="@+id/course_downloadmanager_child_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dp13"
+        android:layout_marginRight="@dimen/dp13"
+        android:background="#e5e5e5"
+        android:layout_marginBottom="@dimen/dp5"
+        android:layout_below="@id/course_downloadmanager_child_titletext"/>
+    <LinearLayout
+        android:id="@+id/course_downloadmanager_child_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/course_downloadmanager_child_line1"/>
+</RelativeLayout>

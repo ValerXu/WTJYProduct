@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/white_parent_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/tool_bar"
+                        layout="@layout/activity_live_one_to_one__tool_bar" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <com.talkfun.widget.MultipleStatusLayout
+                            android:id="@+id/multiple_status_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:emptyView="@layout/activity_live_one_to_one__member_out"
+                            app:errorView="@layout/activity_live_one_to_one__fail"
+                            app:loadingView="@layout/activity_live_one_to_one__loading">
+
+                            <FrameLayout
+                                android:id="@+id/parent_viewgroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <FrameLayout
+                                    android:id="@+id/whiteboard_fl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                                <include
+                                    android:id="@+id/multimedia_layout"
+                                    layout="@layout/activity_live_one_to_multi_media_layout" />
+
+                                <FrameLayout
+                                    android:id="@+id/fl_desktop_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </FrameLayout>
+                        </com.talkfun.widget.MultipleStatusLayout>
+
+                        <include
+                            android:id="@+id/ll_bad_netStatus"
+                            layout="@layout/tip_net_work_error" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/video_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#222830" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/bottom_bar"
+                layout="@layout/activity_live_one_to_one__bottom_bar" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_full_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:clickable="true"
+            android:visibility="gone" />
+    </FrameLayout>
+</layout>

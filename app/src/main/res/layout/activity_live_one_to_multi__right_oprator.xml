@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/draw_iv"
+            style="@style/activity_one_to_multi_right_operator_style"
+            android:layout_above="@+id/eraser_iv"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/live_one_to_one_panel_draw_select" />
+
+        <ImageView
+            android:id="@+id/eraser_iv"
+            style="@style/activity_one_to_multi_right_operator_style"
+            android:layout_above="@+id/vote_iv"
+            android:src="@mipmap/live_one_to_one_eraser" />
+
+        <ImageView
+            android:id="@+id/vote_iv"
+            style="@style/activity_one_to_multi_draw_style"
+            android:layout_above="@+id/chat_iv"
+            android:src="@mipmap/activity_otm_right_oprator_vote"
+           />
+        <View
+            android:id="@+id/view_red_point"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2"
+            android:layout_alignTop="@+id/vote_iv"
+            android:visibility="gone"
+            android:layout_alignRight="@+id/vote_iv"
+            android:background="@drawable/red_pont_bg"/>
+        <ImageView
+            android:id="@+id/chat_iv"
+            style="@style/activity_one_to_multi_draw_style"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/activity_live_one_to_one_chat"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</layout>

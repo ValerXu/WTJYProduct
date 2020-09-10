@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp280"
+        android:layout_height="@dimen/dp160"
+        android:background="@drawable/dialog_bg"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp25"
+            android:text="删除所选内容"
+            android:textColor="#666666"
+            android:textSize="19sp" />
+
+
+        <TextView
+            android:id="@+id/dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="确定删除所选内容吗？"
+            android:gravity="center"
+            android:layout_below="@+id/tip"
+            android:layout_marginTop="@dimen/dp20"
+            android:textColor="#999999"
+            android:textSize="@dimen/textsize17" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp27"
+            android:background="#e5e5e5"
+            android:layout_above="@+id/ll_btn"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/button_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#666666"
+                android:textSize="@dimen/textsize18" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e5e5e5"/>
+
+            <TextView
+                android:id="@+id/button_sure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="确定"
+                android:textColor="#666666"
+                android:textSize="@dimen/textsize18"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

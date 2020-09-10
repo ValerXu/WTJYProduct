@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/one_to_one_theme"
+        android:padding="@dimen/dp_3">
+
+        <TextView
+            android:id="@+id/chat_message_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edit_shape"
+            android:gravity="center_vertical"
+            android:hint="请输入文字"
+            android:maxHeight="@dimen/dp_25"
+            android:maxLines="2"
+            android:minHeight="@dimen/dp_18"
+            android:padding="@dimen/dp_5"
+            android:textColor="@color/white"
+            android:textColorHint="#525E72"
+            android:textSize="@dimen/sp_7" />
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_18"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/one_to_one_send_btn_bg"
+            android:enabled="false"
+            android:text="@string/btn_send"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_8" />
+    </LinearLayout>
+</layout>

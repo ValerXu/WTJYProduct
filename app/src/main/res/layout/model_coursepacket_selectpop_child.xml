@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:id="@+id/course_mainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/coursepacket_selectpop_child_signname"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp30"
+        android:text="科目二证券基础"
+        android:textColor="#ff999999"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:padding="@dimen/dp5"
+        android:background="@drawable/textview_style_rect"/>
+</RelativeLayout>

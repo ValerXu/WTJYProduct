@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data></data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0F1012"
+            android:keepScreenOn="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/tool_bar"
+                layout="@layout/activity_live_one_to_multi_tool_bar" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:emptyView="@layout/activity_live_one_to_one__member_out"
+                app:errorView="@layout/activity_live_one_to_one__fail"
+                app:loadingView="@layout/activity_live_one_to_one__loading">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#242A33" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_whiteboard_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/left_oprator_rl"
+                            layout="@layout/activity_live_one_to_multi__left_oprator" />
+
+                        <com.android.jwjy.wtjyproduct.view.MultipleStatusLayout
+                            android:id="@+id/ml_multi_status"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:emptyView="@layout/activity_live_one_to_one__member_out"
+                            app:errorView="@layout/activity_live_one_to_one__fail"
+                            app:loadingView="@layout/activity_live_one_to_one__loading">
+
+                            <FrameLayout
+                                android:id="@+id/parent_viewgroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <FrameLayout
+                                    android:id="@+id/whiteboard_fl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                                <include
+                                    android:id="@+id/multimedia_layout"
+                                    layout="@layout/activity_live_one_to_multi_media_layout" />
+
+                                <FrameLayout
+                                    android:id="@+id/fl_desktop_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </FrameLayout>
+                        </com.android.jwjy.wtjyproduct.view.MultipleStatusLayout>
+
+                        <include
+                            android:id="@+id/right_oprator_rl"
+                            layout="@layout/activity_live_one_to_multi__right_oprator" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/ll_bad_netStatus"
+                    layout="@layout/tip_net_work_error" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_full_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:clickable="true"
+            android:visibility="gone" />
+    </FrameLayout>
+</layout>

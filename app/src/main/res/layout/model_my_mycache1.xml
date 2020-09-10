@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    公开课 列表详情-->
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.android.jwjy.wtjyproduct.ControllerCustomRoundAngleImageView
+        android:id="@+id/modelmy_mycache1_cover"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_75"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp10"
+        app:shadow_color="0xffe4e4e4"
+        app:image_shadow="true"
+        app:image_radius="5dp"
+        app:image_shadow_radius="5dp"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:id="@+id/modelmy_mycache1_classname_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp_13"
+        android:layout_toRightOf="@id/modelmy_mycache1_cover">
+        <TextView
+            android:id="@+id/modelmy_mycache1_classname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize17"
+            android:textColor="#333333"
+            android:singleLine="true"
+            android:maxLength="10"
+            android:ellipsize="end"
+            android:text="案例分析建筑防火知识"
+            android:layout_marginRight="@dimen/dp13"/>
+        <ImageView
+            android:layout_width="@dimen/dp8"
+            android:layout_height="@dimen/dp12"
+            android:layout_gravity="center"
+            android:background="@drawable/button_arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/modelmy_mycache1_classnumlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@id/modelmy_mycache1_cover"
+        android:layout_above="@+id/modelmy_mycache1_line1"
+        android:layout_marginRight="@dimen/dp_13"
+        android:gravity="left|center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共 "
+            android:textSize="@dimen/textsize13"
+            android:textColor="#999999"/>
+        <TextView
+            android:id="@+id/modelmy_mycache1_classnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="@dimen/textsize13"
+            android:textColor="#999999"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 个视频"
+            android:textSize="@dimen/textsize13"
+            android:textColor="#999999"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/modelmy_mycache1_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_gravity="center_horizontal"
+        android:background="#e5e5e5"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_below="@id/modelmy_mycache1_cover"
+        android:layout_marginRight="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_13"/>
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/model_agreement_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:layout_marginLeft="@dimen/dp13"
+        android:layout_marginRight="@dimen/dp13"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/model_agreement_main_return_button1"
+            android:layout_width="@dimen/dp12"
+            android:layout_height="@dimen/dp16"
+            android:layout_gravity="center"
+            android:background="@drawable/button_return_right_black"
+            android:clickable="true"
+            android:onClick="onClickMyClassAgreementReturn" />
+
+        <TextView
+            android:id="@+id/model_agreement_main_titletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="我的协议"
+            android:textColor="#333333"
+            android:textSize="@dimen/textsize18"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/model_agreement_main_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_below="@id/model_agreement_main_title"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp5"
+        android:background="#e5e5e5" />
+
+    <ScrollView
+        android:id="@+id/model_agreement_main_content_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/model_agreement_main_line1">
+
+        <TextView
+            android:id="@+id/model_agreement_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:layout_marginRight="@dimen/dp13"
+            android:layout_marginLeft="@dimen/dp13"/>
+    </ScrollView>
+
+
+</RelativeLayout>

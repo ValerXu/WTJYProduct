@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    题库 单选题布局 -->
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/questionbank_answerpaper_single_titlesign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/textsize17"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="#666666"
+        android:lineSpacingExtra="@dimen/dp_5"/>
+    <TextView
+        android:id="@+id/questionbank_answerpaper_single_title"
+        android:layout_toRightOf="@id/questionbank_answerpaper_single_titlesign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text=""
+        android:textSize="@dimen/textsize17"
+        android:textColor="#666666"
+        android:lineSpacingExtra="@dimen/dp_5"/>
+    <LinearLayout android:id="@+id/questionbank_answerpaper_content"
+        android:layout_below="@id/questionbank_answerpaper_single_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    </LinearLayout>
+<!--    android:layout_marginTop="@dimen/dp_70"
+android:layout_height="@dimen/dp_37"-->
+    <TextView
+        android:id="@+id/questionbank_answerpaper_single_analysisbutton"
+        android:layout_width="@dimen/dp_193"
+        android:layout_height="@dimen/dp0"
+        android:textColor="#999999"
+        android:text="查看解析"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/dp13"
+        android:layout_marginLeft="@dimen/dp13"
+        android:textSize="@dimen/textsize20"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp0"
+        android:layout_below="@id/questionbank_answerpaper_content"
+        android:background="@drawable/textview_style_rect_gray"
+        />
+    <LinearLayout
+        android:id="@+id/questionbank_answerpaper_single_analysis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/questionbank_answerpaper_single_analysisbutton"
+        android:layout_marginBottom="@dimen/dp13"/>
+</RelativeLayout>

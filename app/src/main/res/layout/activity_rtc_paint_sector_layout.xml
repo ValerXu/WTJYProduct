@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.android.jwjy.wtjyproduct.view.SectorLayout
+        android:id="@+id/paint_sl"
+        android:layout_width="@dimen/activity_small_paint_select_width"
+        android:layout_height="@dimen/activity_small_paint_select_width"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:visibility="gone">
+        <com.talkfun.widget.ColorView
+            android:id="@+id/sector_layout_color_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bg_color="#ff3355"
+            app:border_color="@color/black" />
+
+        <ImageView
+            android:id="@+id/sector_layout_cmd_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/panel_draw_select" />
+        <!-- <FrameLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/activity_small_paint_cmd_bg">
+
+             <ImageView
+                 android:id="@+id/sector_layout_cmd_iv"
+                 android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_gravity="center"
+                 android:background="@mipmap/panel_draw" />
+         </FrameLayout>-->
+
+        <com.talkfun.widget.ColorView
+            android:id="@+id/sector_layout_stroke_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:checked="true"
+            app:color="@color/black"
+            app:checked_border_color="@color/black"
+            app:checked_ring_color="@color/white"
+            app:checked_ring_width_percent="0.8" />
+
+        <ImageView
+            android:id="@+id/sector_layout_eraser_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/activity_small_eraser" />
+
+        <ImageView
+            android:id="@+id/sector_layout_paint_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rtc_theme_bg"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@mipmap/activity_rtc_paint" />
+
+    </com.android.jwjy.wtjyproduct.view.SectorLayout>
+
+
+</merge>

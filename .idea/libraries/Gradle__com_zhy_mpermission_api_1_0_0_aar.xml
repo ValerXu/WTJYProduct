@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.zhy:mpermission-api:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mpermission-api-1.0.0.aar/64a7d1a776ea73b83cf7efe2a908b6fa/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mpermission-api-1.0.0.aar/64a7d1a776ea73b83cf7efe2a908b6fa/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zhy/mpermission-api/1.0.0/82d0ce7978e76dc309143df2751403a23390c64d/mpermission-api-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

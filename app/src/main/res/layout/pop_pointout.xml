@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+    <!--    android:background="@color/transparent"-->
+    <!--    android:orientation="vertical">-->
+
+    <LinearLayout
+        android:id="@+id/fontsize_main_layout"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_76"
+        android:background="@drawable/pop_add_background"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp13"
+        android:layout_marginRight="@dimen/dp_46">
+
+        <TextView
+            android:id="@+id/fontsizetitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="字号设置"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp8"
+            android:textSize="@dimen/textsize15"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:background="#e5e5e5"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp8"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp8">
+            <TextView
+                android:id="@+id/fontsizesmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="A-"
+                android:textColor="#666666"
+                android:textSize="@dimen/textsize16"/>
+            <TextView
+                android:id="@+id/fontsizenomal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="A"
+                android:textColor="#649cf0"
+                android:gravity="center"
+                android:textSize="@dimen/textsize16"/>
+            <TextView
+                android:id="@+id/fontsizebig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="A+"
+                android:textColor="#666666"
+                android:gravity="center"
+                android:textSize="@dimen/textsize16"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

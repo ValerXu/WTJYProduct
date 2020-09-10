@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: in.srain.cube:ultra-ptr:1.0.11@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ultra-ptr-1.0.11.aar/b4fe260e18d400042e6609c87023498e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ultra-ptr-1.0.11.aar/b4fe260e18d400042e6609c87023498e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/in.srain.cube/ultra-ptr/1.0.11/48c7d061c113c372fb728c7e6702100faffd7d35/ultra-ptr-1.0.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

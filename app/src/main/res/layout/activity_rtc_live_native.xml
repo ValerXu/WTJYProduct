@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/base_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/video_view_container_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#888888"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/ppt_fl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/ppt_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/activity_rtc_titlebar" />
+
+                <include layout="@layout/tip_net_error_warn" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+
+                <include layout="@layout/activity_rtc_container" />
+
+                <include layout="@layout/activity_rtc_paint_sector_layout" />
+            </RelativeLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</merge>

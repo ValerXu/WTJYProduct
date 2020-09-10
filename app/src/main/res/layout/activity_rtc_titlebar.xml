@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_small_titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/activity_small_titlebar_height"
+    android:background="@color/activity_small_scheme">
+
+    <RelativeLayout
+        android:id="@+id/activity_small_back_rl"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/activity_rtc_back" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/activity_small_play_total_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/activity_small_back_rl"
+        android:textColor="@color/white" />
+
+    <!--
+        <View
+            android:layout_width="2dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/activity_small_play_total_time_tv"
+            android:background="@color/white" />
+    -->
+
+    <TextView
+        android:id="@+id/activity_small_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="课程名称"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/network_state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/activity_small_refresh_iv"
+        android:background="@drawable/small_room_net_work_state_bg"
+        android:padding="5dp"
+        android:text="网络不佳"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:visibility="gone" />
+
+<!--    <TextView
+        android:id="@+id/log_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/activity_small_refresh_iv"
+        android:text="日志"
+        android:textColor="@color/black"
+        android:visibility="gone" />-->
+
+    <ImageView
+        android:id="@+id/activity_small_refresh_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/refresh_icon" />
+
+</RelativeLayout>

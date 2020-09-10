@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/otm_pop_bg"
+    >
+        <!--空布局-->
+        <TextView
+                android:id="@+id/tv_empty_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="无聊天数据"
+                android:textColor="#828A95"
+                android:textSize="@dimen/sp_14"
+                android:layout_centerInParent="true"
+        />
+    </RelativeLayout>
+</layout>
+

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alivc.conan:AlivcConan:0.9.5@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AlivcConan-0.9.5.aar/0c562dfb8d3b51336103fa79d7f55848/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AlivcConan-0.9.5.aar/0c562dfb8d3b51336103fa79d7f55848/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

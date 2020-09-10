@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?><!--    题库 具体记录-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/questionbank_questionrecords_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:layout_marginLeft="@dimen/dp13"
+        android:layout_marginRight="@dimen/dp13"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/questionbank_questionrecords_return_button1"
+            android:layout_width="@dimen/dp12"
+            android:layout_height="@dimen/dp16"
+            android:layout_gravity="center"
+            android:background="@drawable/button_return_right_black"
+            android:clickable="true"
+            android:onClick="onClickQuestionBankReturn" />
+
+        <TextView
+            android:id="@+id/questionbank_questionrecords_titletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="做题记录"
+            android:textColor="#333333"
+            android:textSize="@dimen/textsize18"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/questionbank_questionrecords_line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_below="@id/questionbank_questionrecords_title"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp5"
+        android:background="#e5e5e5" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/questionbank_questionrecords_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_below="@id/questionbank_questionrecords_line1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/questionbank_questionrecords_tab_chapterexercises"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="章节练习"
+            android:textColor="#333333"
+            android:textSize="@dimen/textsize18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/questionbank_questionrecords_tab_quicktask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="快速做题"
+            android:textColor="#333333"
+            android:textSize="@dimen/textsize16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/questionbank_questionrecords_tab_simulated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="模拟真题"
+            android:textColor="#333333"
+            android:textSize="@dimen/textsize16"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/questionbank_questionrecords_cursor1"
+        android:layout_width="@dimen/dp18"
+        android:layout_height="@dimen/dp2"
+        android:layout_below="@id/questionbank_questionrecords_tab"
+        android:background="@drawable/image_cusor"
+        android:scaleType="matrix" />
+
+    <View
+        android:id="@+id/questionbank_questionrecords_line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_below="@id/questionbank_questionrecords_cursor1"
+        android:layout_gravity="center_horizontal"
+        android:background="#e5e5e5" />
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/Smart_model_questionbank_questionrecord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/questionbank_questionrecords_line2">
+
+        <com.scwang.smartrefresh.header.BezierCircleHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/questionbank_questionrecords_content_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/questionbank_questionrecords_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                    <LinearLayout
+                        android:id="@+id/questionbank_questionrecords_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp15"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        android:layout_marginBottom="@dimen/dp_80">
+                        <View
+                            android:layout_width="@dimen/dp_36"
+                            android:layout_height="@dimen/dp1"
+                            android:background="#e5e5e5"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已显示全部内容"
+                            android:textSize="@dimen/textsize13"
+                            android:textColor="#cc999999"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginRight="@dimen/dp10"/>
+                        <View
+                            android:layout_width="@dimen/dp_36"
+                            android:layout_height="@dimen/dp1"
+                            android:background="#e5e5e5"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+
+        <com.scwang.smartrefresh.layout.footer.FalsifyFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.android.jwjy.wtjyproduct.util.DimensionUtils"></import>
+    </data>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.talkfun.widget.DotView
+                android:id="@+id/stoke_dv"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dp_19"
+                android:background="@drawable/pop_draw_bg"
+                android:layout_height="@dimen/dp_19"/>
+    </FrameLayout>
+</layout>

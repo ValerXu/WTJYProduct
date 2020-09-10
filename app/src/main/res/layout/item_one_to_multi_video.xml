@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils"></import>
+
+        <import type="android.view.View"></import>
+
+        <import type="com.android.jwjy.wtjyproduct.util.DimensionUtils"></import>
+
+        <import type="com.talkfun.sdk.consts.MemberRole"></import>
+
+        <variable
+            name="videoData"
+            type="com.android.jwjy.wtjyproduct.entity.VideoStatusData" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_2"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_2">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_cardview"
+            android:layout_width="@dimen/dp_107"
+            android:layout_height="@dimen/dp_80"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="#2D343B"
+            app:cardCornerRadius="@dimen/dp_3">
+
+            <FrameLayout
+                android:id="@+id/video_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="@{videoData.getRtcUserEntity()== null||videoData.getVideoView()==null ? View.GONE : (videoData.getRtcUserEntity().videoOpen? View.VISIBLE : View.GONE) }" />
+
+            <FrameLayout
+                android:id="@+id/all_close"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_all_close_avatar"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_33"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progress_loading"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <com.talkfun.widget.RoundCornerLinearLayout
+                android:id="@+id/award_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#4F020B14"
+                android:orientation="horizontal"
+                android:visibility="@{videoData==null||videoData.rtcUserEntity==null ||TextUtils.equals(videoData.rtcUserEntity.role,MemberRole.MEMBER_ROLE_SUPER_ADMIN)?  View.GONE : View.VISIBLE}"
+                app:cornerBottomRightRadius="@dimen/dp_12"
+                app:cornerTopRightRadius="@dimen/dp_12">
+
+                <ImageView
+                    android:id="@+id/iv_award"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_1"
+                    android:src="@mipmap/item_otm_award" />
+
+                <TextView
+                    android:id="@+id/tv_award_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dp_1"
+                    android:layout_marginEnd="@dimen/dp_6"
+                    android:text="@{@string/x_prefix + videoData.rtcUserEntity.score/2}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"
+                    tools:text="x 1111111"
+                    android:layout_marginLeft="@dimen/dp_1"
+                    android:layout_marginRight="@dimen/dp_6" />
+            </com.talkfun.widget.RoundCornerLinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_15"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:background="@{TextUtils.equals(videoData.rtcUserEntity.role,MemberRole.MEMBER_ROLE_SUPER_ADMIN)? @color/otm_bottom_spdin_bg:@color/otm_bottom_user_bg}">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{videoData.getRtcUserEntity().getNickname()}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    tools:text="11111111111111111111111111111111123"
+                    android:visibility="@{videoData.rtcUserEntity == null||TextUtils.isEmpty(videoData.rtcUserEntity.nickname)?View.GONE:View.VISIBLE}" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right">
+
+                    <ImageView
+                        android:id="@+id/iv_draw"
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_2"
+                        android:src="@mipmap/item_otm_paint" />
+
+                    <ImageView
+                        android:id="@+id/iv_video"
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_2"
+                        android:src="@mipmap/item_otm_video" />
+
+                    <ImageView
+                        android:id="@+id/iv_audio"
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_2"
+                        android:src="@mipmap/item_otm_audio" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_33"
+                android:layout_gravity="center"
+                android:visibility="@{videoData.getVideoView()==null?View.VISIBLE:View.GONE}" />
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+</layout>

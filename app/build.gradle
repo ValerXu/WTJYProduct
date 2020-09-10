@@ -1,0 +1,280 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.android.jwjy.jkjyproduct"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+//        jniLibs.srcDirs = ['libs']
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "armeabi", 'arm64-v8a', 'x86_64'
+        }
+        splits {
+            abi {
+                def isReleaseBuild = false
+
+                gradle.startParameter.taskNames.find {
+                    // Enable split for release builds in different build flavors
+                    // (assemblePaidRelease, assembleFreeRelease, etc.).
+                    if (it ==~ /:app:assemble.*Release/) {
+                        isReleaseBuild = true
+                        return true // break
+                    }
+
+                    return false // continue
+                }
+
+                // Enables building multiple APKs per ABI.
+                enable isReleaseBuild
+                universalApk true
+            }
+        }
+        vectorDrawables.useSupportLibrary = true
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "9ee061801b9e93ddcd1613ca", //JPush 上注册的包名对应的 Appkey.630533665c5698de33755821
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    signingConfigs {
+        debug {//调试版本的签名配置
+            storeFile file("$rootDir/keystore/huozhongedu.keystore")
+            keyAlias "huozhongedu.keystore"
+            storePassword "huozhongedu20180403"
+            keyPassword "huozhongedu20180403"
+        }
+        release {//发布版本的签名配置
+            storeFile file("$rootDir/keystore/huozhongedu.keystore")
+            keyAlias "huozhongedu.keystore"
+            storePassword "huozhongedu20180403"
+            keyPassword "huozhongedu20180403"
+        }
+    }
+    buildTypes {
+        debug {
+            multiDexEnabled true
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources false
+            multiDexEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        develop {}
+        xiaomi {}
+        huawei {}
+        anzhi {}
+    }
+//    android.applicationVariants.all { variant ->
+//
+//        variant.outputs.all {
+//            outputFileName = "JWJY_${defaultConfig.versionName}_${releaseTime()}.apk"
+//        }
+//
+//    }
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs =
+                    [
+                            'src/main/res/layout',
+                            'src/main/res']
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    buildToolsVersion '28.0.3'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dexOptions {
+        preDexLibraries = false
+    }
+// 添加如下代码
+    dataBinding {
+        enabled = true
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+def EXCLUDE_JAR_LIST = ['cube-sdk', 'support-v4-r7-source', 'ultra-ptr', 'support-annotation', 'ptr-lib']
+task copyLibs {
+    // copy jars
+    copy {
+        from configurations.compile
+        into "libs"
+        eachFile { file ->
+            println file.name
+            for (name in EXCLUDE_JAR_LIST) {
+                if (file.name.contains(name)) {
+                    file.exclude()
+                    return
+                }
+            }
+        }
+    }
+    // copy source
+    copy {
+        def sourceList = configurations.compile.incoming.dependencies.collect { dependency ->
+            dependency.artifact { artifact ->
+                artifact.name = dependency.name
+                artifact.type = 'source'
+                artifact.extension = 'jar'
+                artifact.classifier = 'sources'
+            }
+            dependency
+        }
+        from(configurations.detachedConfiguration(sourceList as Dependency[]).resolvedConfiguration.
+                resolvedConfiguration.lenientConfiguration.getFiles(Specs.SATISFIES_ALL)) {
+        }
+        into("libs")
+        eachFile { file ->
+            println file.name
+            for (name in EXCLUDE_JAR_LIST) {
+                if (file.name.contains(name)) {
+                    file.exclude()
+                    return
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation "com.android.support:support-v4:$supportVersion"
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support:recyclerview-v7:$supportVersion"
+    implementation "com.android.support:cardview-v7:$supportVersion"
+    implementation "com.android.support:design:$supportVersion"
+
+    implementation project(path: ':sdk')
+    implementation project(path: ':libwidget')
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+//    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.9'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'in.srain.cube:ultra-ptr:1.0.11'
+    implementation files('libs/dom4j-1.6.1.jar')
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    //动态权限申请库
+    implementation 'pub.devrel:easypermissions:1.3.0'
+    implementation 'net.zetetic:android-database-sqlcipher:3.5.7@aar'
+    //课程表日历库
+    implementation 'com.haibin:calendarview:3.2.9'
+    //可收缩的TextView
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+    //添加cardview改变背景板
+//    implementation 'com.android.support:cardview-v7:28.0.0'
+    //photopicker
+    implementation project(':PhotoPicker')
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.mylhyl:circleDialog:3.0.5'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'q.rorbin:badgeview:1.1.3'
+    implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    implementation 'com.cpiz.bubbleview:bubbleview:1.0.2'
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
+    implementation 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    annotationProcessor 'com.zhy:mpermission-compiler:1.0.0'
+    implementation 'com.zhy:mpermission-api:1.0.0'
+
+    implementation 'com.google.code.gson:gson:2.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.0'
+    implementation 'io.socket:socket.io-client:0.8.3'
+    implementation 'org.nanohttpd:nanohttpd:2.2.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    //RecycView的上拉刷新下拉加载依赖
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-22'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-22'
+
+    implementation 'com.android.support:multidex:1.0.3'
+//    implementation 'com.squareup.okhttp3:okhttp:3.4.2'
+    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.2.2'
+    // 支付宝 SDK AAR 包所需的配置
+    implementation(name: 'alipaySdk-15.6.8-20191021122514', ext: 'aar')
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+
+    implementation 'com.alibaba:fastjson:1.1.70.android'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+
+//    //饺子视频播放器
+//    implementation 'cn.jzvd:jiaozivideoplayer:6.2.12'
+
+    //阿里云播放器的两个依赖
+    implementation 'com.alivc.conan:AlivcConan:0.9.5'
+    implementation(name: 'AliyunPlayer-4.7.3-full', ext: 'aar')
+    //极光推送
+    implementation 'cn.jiguang.sdk:jpush:3.5.4'  // 此处以JPush 3.5.4 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.2.6'
+    implementation project(path: ':AliyunVideoCommon')
+    implementation project(path: ':player_demo')  // 此处以JCore 2.2.6 版本为例。
+
+    implementation 'com.wang.avi:library:2.1.3'
+}

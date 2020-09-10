@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AliyunVideoCommon/AliyunVideoCommon.iml" filepath="$PROJECT_DIR$/AliyunVideoCommon/AliyunVideoCommon.iml" group="jkjyproduct/AliyunVideoCommon" />
+      <module fileurl="file://$PROJECT_DIR$/PhotoPicker/PhotoPicker.iml" filepath="$PROJECT_DIR$/PhotoPicker/PhotoPicker.iml" group="jkjyproduct/PhotoPicker" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="jkjyproduct/app" />
+      <module fileurl="file://$PROJECT_DIR$/jkjyproduct.iml" filepath="$PROJECT_DIR$/jkjyproduct.iml" group="jkjyproduct" />
+      <module fileurl="file://$PROJECT_DIR$/libwidget/libwidget.iml" filepath="$PROJECT_DIR$/libwidget/libwidget.iml" group="jkjyproduct/libwidget" />
+      <module fileurl="file://$PROJECT_DIR$/player_demo/player_demo.iml" filepath="$PROJECT_DIR$/player_demo/player_demo.iml" group="jkjyproduct/player_demo" />
+      <module fileurl="file://$PROJECT_DIR$/sdk/sdk.iml" filepath="$PROJECT_DIR$/sdk/sdk.iml" group="jkjyproduct/sdk" />
+    </modules>
+  </component>
+</project>

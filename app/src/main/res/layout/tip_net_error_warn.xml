@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bad_netStatus_ll"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/net_status_layout_height"
+    android:background="@color/net_status_layout_bgcolor"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:visibility="gone">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/warning_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/operator_btn_height"
+        android:text="@string/not_connect"
+        android:textColor="@color/black"
+        android:textSize="@dimen/network_tip_size" />
+</LinearLayout>

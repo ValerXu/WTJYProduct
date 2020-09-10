@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/guide_bg">
+    <ImageView
+            android:id="@+id/draw_iv"
+            android:src="@mipmap/activity_live_one_to_one_guide_two_draw"
+            android:layout_alignParentBottom="true"
+            android:layout_width="@dimen/dp_230" android:layout_height="@dimen/dp_200"
+    />
+    <ImageView
+            android:id="@+id/arrow_iv"
+            android:src="@mipmap/activity_live_one_to_one_guide_two_arrow"
+            android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_45"
+            android:layout_toRightOf="@+id/draw_iv"
+            android:layout_marginLeft="10dp" android:layout_alignTop="@+id/draw_iv"/>
+
+    <ImageView
+            android:id="@+id/instructions_iv"
+            android:layout_toRightOf="@+id/arrow_iv"
+            android:src="@mipmap/activity_live_one_to_one_guide_two_instructions"
+            android:layout_width="@dimen/dp_130" android:layout_height="@dimen/dp_60"
+            android:layout_alignTop="@+id/arrow_iv" android:layout_marginTop="-30dp"/>
+
+    <ImageView
+            android:id="@+id/kown_iv"
+            android:src="@mipmap/activity_live_one_to_one_guide_two_kown"
+            android:layout_width="@dimen/dp_110" android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/instructions_iv"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_below="@+id/instructions_iv"/>
+
+
+</RelativeLayout>

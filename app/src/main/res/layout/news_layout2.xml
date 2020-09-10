@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    新闻资讯 列表详情-->
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <TextView
+        android:id="@+id/news2_newstitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp13"
+        android:text="新闻标题"
+        android:lineSpacingExtra="@dimen/dp6"
+        android:textColor="#333333"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:textSize="@dimen/textsize22"
+        android:layout_marginTop="@dimen/dp15" />
+    <TextView
+        android:id="@+id/news2_newsdata"
+        android:layout_below="@id/news2_newstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp6"
+        android:text="2019-11-12 12:10"
+        android:layout_marginTop="@dimen/dp15"
+        android:textSize="@dimen/textsize13"
+        android:textColor="@color/black999999"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/news2_newstime"-->
+<!--        android:layout_below="@id/news2_newstitle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="12:10"-->
+<!--        android:layout_toRightOf="@id/news2_newsdata"-->
+<!--        android:layout_marginTop="@dimen/dp15"-->
+<!--        android:textSize="@dimen/textsize13"-->
+<!--        android:textColor="@color/black999999"/>-->
+
+    <TextView
+        android:id="@+id/news2_separator"
+        android:layout_below="@id/news2_newstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp6"
+        android:text="•"
+        android:layout_toRightOf="@id/news2_newsdata"
+        android:layout_marginTop="@dimen/dp15"
+        android:textSize="@dimen/textsize13"
+        android:textColor="@color/black999999"/>
+
+    <TextView
+        android:id="@+id/news2_look"
+        android:layout_below="@id/news2_newstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp6"
+        android:text="浏览"
+        android:layout_toRightOf="@id/news2_separator"
+        android:layout_marginTop="@dimen/dp15"
+        android:textSize="@dimen/textsize13"
+        android:textColor="@color/black999999"/>
+
+    <TextView
+        android:id="@+id/news2_looknum"
+        android:layout_below="@id/news2_newstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp6"
+        android:layout_marginRight="@dimen/dp13"
+        android:text="100"
+        android:layout_toRightOf="@id/news2_look"
+        android:layout_marginTop="@dimen/dp15"
+        android:textSize="@dimen/textsize13"
+        android:textColor="@color/black999999"/>
+    <TextView
+        android:id="@+id/news2_news"
+        android:layout_below="@id/news2_newsdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp13"
+        android:layout_marginTop="@dimen/dp20"/>
+
+    <TextView
+        android:id="@+id/news2_end"
+        android:layout_below="@id/news2_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp13"
+        android:text="—END—"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp30"
+        android:textSize="@dimen/textsize18"
+        android:textColor="@color/black999999"/>
+</RelativeLayout>

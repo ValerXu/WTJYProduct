@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    课程问答 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e5e5e5"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/course_question_respond_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp35"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp7"
+        android:layout_marginBottom="@dimen/dp7"
+        android:layout_marginLeft="@dimen/dp13"
+        android:layout_marginRight="@dimen/dp13">
+        <EditText
+            android:id="@+id/course_question_respond_layout_edittext"
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:textSize="@dimen/textsize15"
+            android:textColorHint="#cecece"
+            android:textColor="#333333"
+            android:hint="回复" />
+    </LinearLayout>
+<!--    android:layout_width="@dimen/dp25"-->
+<!--    android:layout_marginRight="@dimen/dp13"-->
+    <ImageView
+        android:id="@+id/course_question_respond_layout_image_button"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="@dimen/dp20"
+        android:layout_gravity="center"
+        android:background="@drawable/button_answer_image"
+        android:layout_marginRight="@dimen/dp0"/>
+    <ImageView
+        android:id="@+id/course_question_respond_layout_commit_button"
+        android:layout_width="@dimen/dp53"
+        android:layout_height="@dimen/dp30"
+        android:layout_gravity="center"
+        android:background="@drawable/button_publish_gray"
+        android:layout_marginRight="@dimen/dp13"/>
+</LinearLayout>

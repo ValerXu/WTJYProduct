@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="ControllerCustomRoundAngleImageView">
+        <attr name="image_radius" format="dimension" />//圆角大小
+        <attr name="image_shadow_radius" format="dimension" />//阴影大小
+        <attr name="image_circle" format="boolean" />//是否圆形
+        <attr name="image_shadow" format="boolean" />//是否阴影
+        <attr name="shadow_color" format="integer"/>//阴影颜色
+    </declare-styleable>
+    <declare-styleable name="ModelSearchView">
+        <attr name="textSizeSearch" format="dimension"  />
+        <attr name="textColorSearch" format="color" />
+        <attr name="textHintSearch" format="string" />
+        <attr name="searchBlockHeight" format="integer" />
+        <attr name="searchBlockColor" format="color" />
+    </declare-styleable>
+    <!-- 为ControllerHorizontalProgressBar添加自定义属性 -->
+    <declare-styleable name="ControllerHorizontalProgressBar">
+        <attr name="ProgresUnReachColor" format="color"/>
+        <attr name="HorizontalProgresUnReachHeight" format="dimension"/>
+        <attr name="HorizontalProgresUnReachColor" format="color"/>
+        <attr name="HorizontalProgresReachColor" format="color"/>
+        <attr name="HorizontalProgresReachHeight" format="dimension"/>
+        <attr name="HorizontalProgresReachTextColor" format="color"/>
+        <attr name="HorizontalProgresReachTextSize" format="dimension"/>
+        <attr name="HorizontalProgresReachTextOffset" format="dimension"/>
+        <attr name="HorizontalProgresReachTextVisibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ControllerRoundProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="RoundProgressBartextColor" format="color" />
+        <attr name="RoundProgressBartextColor1" format="color" />
+        <attr name="RoundProgressBartextSize" format="dimension" />
+        <attr name="RoundProgressBartextSize1" format="dimension" />
+        <attr name="RoundProgressBartext" format="string" />
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+    <attr name="checked" format="boolean" /><!--是否选中-->
+    <attr name="bg_color" format="color" />
+    <attr name="inner_cicle_scale" format="float" /><!--内环的比例-->
+    <declare-styleable name="ColorView">
+        <attr name="checked" /><!--是否选中-->
+        <attr name="color" format="color"/>
+        <attr name="border_color" format="color"/> <!--边框颜色-->
+        <attr name="border_width" format="dimension"/><!--边框宽度-->
+        <attr name="checked_border_color" format="color"/><!--选中边框颜色-->
+        <attr name="checked_ring_color" format="color"/><!--选中环颜色-->
+        <attr name="checked_ring_width" format="dimension"/>
+        <attr name="checked_ring_width_percent" format="float"/>
+        <attr name="color_shape_type"/>
+        <attr name="corner_radius" format="dimension"/> <!-- 圆角半径-->
+    </declare-styleable>
+
+    <declare-styleable name="StrokeView">
+        <attr name="checked" />
+        <attr name="bg_color" /><!--是否选中-->
+        <attr name="inner_cicle_scale" /><!--内环的比例-->
+        <attr name="un_checked_color" format="color" /><!--内环未选中的颜色-->
+        <attr name="checked_color" format="color" /><!--内环选中的颜色-->
+    </declare-styleable>
+
+    <declare-styleable name="MultipleStatusLayout">
+        <attr name="loadingView" format="reference"/>
+        <attr name="emptyView" format="reference"/>
+        <attr name="errorView" format="reference"/>
+        <attr name="contentView" format="reference"/>
+        <attr name="networdbadView" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CalendarView">
+
+        <attr name="calendar_padding" format="dimension" /><!--日历内部左右padding-->
+
+        <attr name="week_background" format="color" /><!--周背景-->
+        <attr name="week_line_background" format="color" /><!--线条颜色-->
+        <attr name="week_text_color" format="color" /><!--周栏字体颜色-->
+        <attr name="week_text_size" format="dimension" /><!--周栏字体大小-->
+        <attr name="week_line_margin" format="dimension" /><!--线条margin-->
+
+        <attr name="month_view" format="string" /><!--完全自定义月视图-->
+        <attr name="week_view" format="string" /> <!--完全自定义周视图-->
+        <attr name="year_view" format="string" /> <!--完全自定义年视图-->
+        <attr name="week_bar_height" format="dimension" /> <!--星期栏的高度-->
+        <attr name="week_bar_view" format="string" /> <!--如果需要的话使用自定义星期栏-->
+
+        <attr name="scheme_text" format="string" />
+        <attr name="day_text_size" format="dimension" />
+        <attr name="lunar_text_size" format="dimension" />
+        <attr name="calendar_height" format="dimension" />
+        <attr name="calendar_match_parent" format="boolean" /> <!-- 全屏日历 -->
+        <attr name="scheme_text_color" format="color" />
+        <attr name="scheme_month_text_color" format="color" />
+        <attr name="scheme_lunar_text_color" format="color" />
+        <attr name="scheme_theme_color" format="color" />
+
+        <attr name="selected_theme_color" format="color" />
+        <attr name="selected_text_color" format="color" />
+        <attr name="selected_lunar_text_color" format="color" />
+
+        <attr name="current_day_text_color" format="color" />
+        <attr name="current_day_lunar_text_color" format="color" />
+        <attr name="current_month_text_color" format="color" />
+        <attr name="other_month_text_color" format="color" />
+        <attr name="current_month_lunar_text_color" format="color" />
+        <attr name="other_month_lunar_text_color" format="color" />
+
+
+        <!-- 年视图相关 -->
+        <attr name="year_view_month_text_size" format="dimension" />
+        <attr name="year_view_day_text_size" format="dimension" />
+        <attr name="year_view_month_text_color" format="color" />
+        <attr name="year_view_current_day_text_color" format="color" />
+        <attr name="year_view_day_text_color" format="color" />
+        <attr name="year_view_select_text_color" format="color" />
+        <attr name="year_view_scheme_color" format="color" />
+        <attr name="year_view_background" format="color" />
+        <attr name="year_view_month_height" format="dimension" />
+        <attr name="year_view_week_height" format="dimension" />
+        <attr name="year_view_week_text_size" format="dimension" />
+        <attr name="year_view_week_text_color" format="color" />
+        <attr name="year_view_padding" format="dimension" />
+        <attr name="year_view_month_margin_top" format="dimension" />
+        <attr name="year_view_month_margin_bottom" format="dimension" />
+
+        <!--日期范围-->
+        <attr name="min_year" format="integer" />
+        <attr name="max_year" format="integer" />
+        <attr name="min_year_month" format="integer" />
+        <attr name="max_year_month" format="integer" />
+        <attr name="min_year_day" format="integer" />
+        <attr name="max_year_day" format="integer" />
+
+
+        <!--月视图是否可滚动-->
+        <attr name="month_view_scrollable" format="boolean" />
+        <!--周视图是否可滚动-->
+        <attr name="week_view_scrollable" format="boolean" />
+        <!--年视图是否可滚动-->
+        <attr name="year_view_scrollable" format="boolean" />
+
+        <!-- 月份显示模式 -->
+        <attr name="month_view_show_mode">
+            <enum name="mode_all" value="0" />
+            <enum name="mode_only_current" value="1" />
+            <enum name="mode_fix" value="2" />
+        </attr>
+
+        <!-- 自定义周起始 -->
+        <attr name="week_start_with">
+            <enum name="sun" value="1" />
+            <enum name="mon" value="2" />
+            <enum name="sat" value="7" />
+        </attr>
+
+        <!-- 自定义选择模式 -->
+        <attr name="select_mode">
+            <enum name="default_mode" value="0" />
+            <enum name="single_mode" value="1" />
+            <enum name="range_mode" value="2" />
+            <enum name="multi_mode" value="3" />
+        </attr>
+
+        <!-- when select_mode = multi_mode -->
+        <attr name="max_multi_select_size" format="integer" />
+
+        <!-- when select_mode = range_mode -->
+        <attr name="min_select_range" format="integer" />
+        <attr name="max_select_range" format="integer" />
+
+        <!-- auto select day -->
+        <attr name="month_view_auto_select_day">
+            <enum name="first_day_of_month" value="0" />
+            <enum name="last_select_day" value="1" />
+            <enum name="last_select_day_ignore_current" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="GroupRecyclerView">
+        <attr name="group_height" format="dimension" />
+        <attr name="group_child_offset" format="dimension" />
+        <attr name="group_background" format="color" />
+        <attr name="group_text_color" format="color" />
+        <attr name="group_text_size" format="dimension" />
+        <attr name="group_center" format="boolean" />
+        <attr name="group_padding_left" format="dimension" />
+        <attr name="group_padding_right" format="dimension" />
+        <attr name="group_has_header" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ControllerWarpLinearLayout">
+        <attr name="grivate" format="enum"><!--对齐方式 !-->
+            <enum name="right" value="0"></enum>
+            <enum name="left" value="1"></enum>
+            <enum name="center" value="2"></enum>
+        </attr>
+        <attr name="horizontal_Space" format="dimension"></attr>
+        <attr name="vertical_Space" format="dimension"></attr>
+        <attr name="isFull" format="boolean"></attr>
+    </declare-styleable>
+</resources>

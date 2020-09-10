@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:background="@color/live_status_bg"
+                android:layout_height="match_parent">
+    <ImageView
+            android:id="@+id/live_status_iv"
+            android:layout_width="@dimen/dp_174"
+            android:layout_height="@dimen/dp_91"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/live_one_to_one_start_stop"
+    />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_below="@+id/live_status_iv"
+              android:textColor="@color/live_status_word"
+              android:layout_centerHorizontal="true"
+              android:textSize="@dimen/dp_16"
+              android:layout_marginLeft="@dimen/dp_5"
+              android:text="@string/live_stop"
+              android:layout_marginTop="@dimen/dp_1"/>
+</RelativeLayout>

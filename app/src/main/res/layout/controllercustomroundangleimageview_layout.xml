@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+    <com.android.jwjy.wtjyproduct.ControllerCustomRoundAngleImageView
+        android:id="@+id/CustomRoundAngleImageView"
+        android:layout_width="@dimen/dp_140"
+        android:layout_height="@dimen/dp_80"
+        app:shadow_color="0xffe4e4e4"
+        app:image_shadow="false"
+        app:image_radius="@dimen/dp5"
+        app:image_shadow_radius="@dimen/dp5"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"/>
+</RelativeLayout>

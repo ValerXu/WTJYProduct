@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="ItemPopDrawBindingImpl">
+    </data>
+    <FrameLayout
+            android:id="@+id/draw_parent_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+                android:id="@+id/draw_type_iv"
+                android:layout_width="@dimen/dp_19"
+                android:layout_height="@dimen/dp_19"
+                android:background="@drawable/pop_draw_bg"
+                android:layout_gravity="center"
+        />
+    </FrameLayout>
+</layout>

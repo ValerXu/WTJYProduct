@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+    </data>
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+    >
+        <com.talkfun.widget.ColorView
+                android:id="@+id/color_cv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_gravity="center"
+                app:color_shape_type="rectangle"
+                app:border_color="@color/transparent"
+                app:border_width="@dimen/dp_0_5"
+                app:checked_border_color="@color/white"
+                app:checked_ring_color="#1D2229"
+                app:checked_ring_width_percent="0.15"
+                app:corner_radius="@dimen/dp_1"
+        />
+    </FrameLayout>
+</layout>
